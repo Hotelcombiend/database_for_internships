@@ -50,7 +50,7 @@ VALUES("P001", "prdn001", "type01", 100, 15),
 ("P007", "prdn007", "type02", 40, 15),
 ("P008", "prdn008", "type01", 220, 10),
 ("P009", "prdn009", "type03", 18, 5),
-("P0010", "prdn010", "type02", 125, 10)
+("P010", "prdn010", "type02", 125, 10)
 
 CREATE TABLE Customers_in (
 cust_id varchar (255),
