@@ -1,0 +1,65 @@
+CREATE TABLE Transactions(
+txn_id varchar(255),
+txn_date date,
+prod_id varchar (255),
+cust_id varchar (255),
+qty int,
+total_price float
+);
+
+INSERT INTO Transactions 
+VALUES("txn001", "2019/12/30", "P002", "C001", 20, null)
+,("txn002", "2019/12/30", "P001", "C004", 15, null)
+,("txn003", "2019/12/31", "P010", "C002", 5, null)
+,("txn004", "2019/12/31", "P008", "C001", 5, null)
+,("txn005", "2020/01/01", "P001", "C004", 1, null)
+,("txn006", "2020/01/01", "P002", "C006", 5, null)
+,("txn007", "2020/01/01", "P007", "C001", 2, null)
+,("txn008", "2020/01/02", "P001", "C005", 5, null)
+,("txn009", "2020/01/02", "P005", "C005", 1, null)
+,("txn010", "2020/01/02", "P009", "C004", 3, null)
+,("txn011", "2020/01/02", "P010", "C004", 4, null)
+,("txn012", "2020/01/03", "P001", "C004", 2, null)
+,("txn013", "2020/01/03", "P007", "C004", 5, null)
+,("txn014", "2020/01/10", "P010", "C006", 2, null)
+,("txn015", "2020/01/10", "P002", "C004", 1, null)
+,("txn016", "2020/01/10", "P002", "C001", 2, null)
+,("txn017", "2020/01/15", "P010", "C005", 5, null)
+,("txn018", "2020/01/15", "P005", "C005", 2, null)
+,("txn019", "2020/01/30", "P002", "C002", 3, null)
+,("txn020", "2020/01/30", "P010", "C002", 5, null)
+,("txn021", "2020/01/30", "P009", "C001", 1, null)
+
+CREATE TABLE Products_in (
+prod_id varchar(255),
+prod_nm varchar (255),
+prod_type varchar (255),
+price int,
+num_in_stack int
+);
+
+INSERT INTO Products_in 
+VALUES("P001", "prdn001", "type01", 100, 15),
+("P002", "prdn002", "type02", 20, 25),
+("P003", "prdn003", "type03", 150, 20),
+("P004", "prdn004", "type01", 200, 12),
+("P005", "prdn005", "type01", 12, 10),
+("P006", "prdn006", "type03", 25, 10),
+("P007", "prdn007", "type02", 40, 15),
+("P008", "prdn008", "type01", 220, 10),
+("P009", "prdn009", "type03", 18, 5),
+("P0010", "prdn010", "type02", 125, 10)
+
+CREATE TABLE Customers_in (
+cust_id varchar (255),
+cust_nm varchar(255),
+DOB varchar(255)
+);
+
+INSERT INTO Customers_in
+VALUES("C001", "cn001", "30/1/1999"),
+("C002", "cn002", "23/6/1988"),
+("C003", "cn003", "11/9/1993"),
+("C004", "cn004", "31/7/1987"),
+("C005", "cn005", "01/3/2000"),
+("C006", "cn006", "14/9/1983")
