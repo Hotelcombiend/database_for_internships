@@ -4,7 +4,8 @@ txn_date date,
 prod_id varchar (255),
 cust_id varchar (255),
 qty int,
-total_price float
+total_price float,
+PRIMARY KEY (txn_id)
 );
 
 INSERT INTO Transactions 
@@ -35,7 +36,8 @@ prod_id varchar(255),
 prod_nm varchar (255),
 prod_type varchar (255),
 price int,
-num_in_stack int
+num_in_stack int,
+FOREIGN KEY (prod_id) REFERENCES Transactions(prod_id)
 );
 
 INSERT INTO Products_in 
@@ -53,7 +55,8 @@ VALUES("P001", "prdn001", "type01", 100, 15),
 CREATE TABLE Customers_in (
 cust_id varchar (255),
 cust_nm varchar(255),
-DOB varchar(255)
+DOB varchar(255),
+FOREIGN KEY (cust_id) REFERENCES Transactions(cust_id)
 );
 
 INSERT INTO Customers_in
